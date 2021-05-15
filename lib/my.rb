@@ -45,4 +45,6 @@ module My
   puts list.inspect
   # see all methods of class
   p list.methods
+
+  class SongTest
 end

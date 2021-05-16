@@ -12,6 +12,8 @@ module SongTest
     end
   end
 
+
+  # Inheritance and Messages
   class KaraokeSong < Song
     def initialize(name, artist, duration, lyrics)
       super(name, artist, duration)
@@ -40,4 +42,31 @@ module SongTest
   aBoleroSong = BoleroSong.new("Tan Co Dao Duyen", "Thuan Minh", 244, "And now, the...")
   p aSong.to_s
   p aBoleroSong.to_s
+
+  # Inheritance and Mixins
+  # However, an object that is totally secretive is pretty useless---you can create it, but then you can't do anything with it.
+  # một phương thức khởi tạo khác của ruby
+
+  # Objects and Attributes
+  class CandyCrush
+    def initialize(name, artist, duration)
+      @name = name
+      @artist = artist
+      @duration = duration
+    end
+
+    def name
+      @name
+    end
+    def artist
+      @artist
+    end
+    def duration
+      @duration
+    end
+  end
+
+  aCandy = CandyCrush.new("Bicycle", "Fleck", 260)
+  p "Candy #{aCandy.inspect}"
+  p "Candy name #{aCandy.name}"
 end

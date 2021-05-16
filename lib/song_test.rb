@@ -48,6 +48,7 @@ module SongTest
   # một phương thức khởi tạo khác của ruby
 
   # Objects and Attributes
+  # truy câp đối tượng
   class CandyCrush
     def initialize(name, artist, duration)
       @name = name
@@ -69,4 +70,20 @@ module SongTest
   aCandy = CandyCrush.new("Bicycle", "Fleck", 260)
   p "Candy #{aCandy.inspect}"
   p "Candy name #{aCandy.name}"
+
+  # example attr_reader
+  # sử dụng attr_reader giống như Getter, để truy cập attribute của object
+  class ExampleAttributeReader
+    attr_reader :name, :artist, :duration
+
+    def initialize(name, artist, duration)
+      @name = name
+      @artist = artist
+      @duration = duration
+    end
+  end
+
+  example = ExampleAttributeReader.new("Example reader", "Dan Truong", 123)
+  p "example #{example.inspect}"
+  p "example get attribute name #{example.name}"
 end

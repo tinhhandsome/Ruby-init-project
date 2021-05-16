@@ -81,9 +81,33 @@ module SongTest
       @artist = artist
       @duration = duration
     end
+
+    # def duration=(newDuration)
+    #   @duration = newDuration
+    # end
+
+    def example_write_attibute(duration)
+      @duration = duration
+    end
   end
 
   example = ExampleAttributeReader.new("Example reader", "Dan Truong", 123)
   p "example #{example.inspect}"
   p "example get attribute name #{example.name}"
+  p "write example duration #{example.example_write_attibute(456)}"
+  
+  # Writable Attributes
+
+  class AttributesWriter
+    attr_writer :name
+    attr_reader :name
+    def initialize(name)
+      @name = name
+    end
+  end
+
+  writer = AttributesWriter.new("init writer")
+  p "writer attibute name #{writer.name}"
+  writer.name = "override writer"
+  p "writer override name #{writer.name}"
 end

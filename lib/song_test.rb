@@ -91,6 +91,7 @@ module SongTest
     end
   end
 
+  # Không dùng attribure attr_writer để ghi đè attributes
   example = ExampleAttributeReader.new("Example reader", "Dan Truong", 123)
   p "example #{example.inspect}"
   p "example get attribute name #{example.name}"

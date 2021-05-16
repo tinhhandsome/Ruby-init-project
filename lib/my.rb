@@ -46,5 +46,5 @@ module My
   # see all methods of class
   p list.methods
 
-  class SongTest
+  # class SongTest
 end
